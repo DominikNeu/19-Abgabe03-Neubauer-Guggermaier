@@ -3,5 +3,5 @@
 .idea
 target
 .DS_Store
-Calculator/.idea
-Calculator/Calculator.iml
+./Calculator/.idea
+./Calculator/Calculator.iml
