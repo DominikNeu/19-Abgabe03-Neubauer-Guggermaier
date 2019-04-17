@@ -66,10 +66,14 @@ public class StringStackTest
 
         assertTrue(s.isEmpty());
     }
-
     
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
-    
+
+    @Test(expected = IllegalStateException.class)
+    public void testEmptyPop() throws Exception{
+        s.pop();
+    }
+
 }
