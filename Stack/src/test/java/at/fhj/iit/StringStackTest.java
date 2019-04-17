@@ -52,7 +52,21 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+        s.push("knock - knock - knock");
+        s.push("Penny");
+        s.push("knock - knock - knock");
+        s.push("Penny");
+        s.push("knock - knock - knock => Penny");
+
+        assertEquals("knock - knock - knock => Penny",s.pop());
+        assertEquals("Penny",s.pop());
+        assertEquals("knock - knock - knock",s.pop());
+        assertEquals("Penny",s.pop());
+        assertEquals("knock - knock - knock",s.pop());
+
+        assertTrue(s.isEmpty());
     }
+
     
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
