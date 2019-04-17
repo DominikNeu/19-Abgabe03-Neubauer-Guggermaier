@@ -34,8 +34,9 @@ public class StringStackTest
      * - assertFalse to check it's not empty
      */
     @Test
-    public void testIsNotEmpty() throws Exception
-    {
+    public void testIsNotEmpty() throws Exception {
+        s.push("Hallo");
+        assertFalse(s.isEmpty());
     }
 
     /**
