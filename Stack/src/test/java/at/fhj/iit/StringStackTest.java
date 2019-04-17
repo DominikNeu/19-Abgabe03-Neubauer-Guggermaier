@@ -76,4 +76,13 @@ public class StringStackTest
         s.pop();
     }
 
+    @Test(expected = IllegalStateException.class)
+    public void testFullPush() throws Exception {
+        s.push("t1");
+        s.push("t2");
+        s.push("t3");
+        s.push("t4");
+        s.push("t5");
+        s.push("t6");
+    }
 }
