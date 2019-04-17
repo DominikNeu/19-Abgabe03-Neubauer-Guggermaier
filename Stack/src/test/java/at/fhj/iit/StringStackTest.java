@@ -85,4 +85,9 @@ public class StringStackTest
         s.push("t5");
         s.push("t6");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstruktorCapNull() throws Exception{
+        StringStack stack = new StringStack(0);
+    }
 }
