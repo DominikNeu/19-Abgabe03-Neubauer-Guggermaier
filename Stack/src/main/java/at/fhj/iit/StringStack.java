@@ -21,8 +21,8 @@ public class StringStack implements Stack
      * is the position counter of the top item
      */
     private int elementCount;
-    
-    
+
+
     /**
      * Constructor that initializes the stack with the given size.
      *

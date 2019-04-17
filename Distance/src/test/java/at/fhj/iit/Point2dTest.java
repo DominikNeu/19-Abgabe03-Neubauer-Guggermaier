@@ -5,11 +5,20 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.awt.*;
+
 public class Point2dTest {
 
+	private Point2d point2d;
 	/**
 	 * Set some Point2d for testing their functionality
 	 */
+	@Before
+	public void setup(){
+		point2d = new Point2d();
+		point2d.setY(4);
+		point2d.setX(3);
+	}
 
 	/**
 	 * Test the Setter of the x-coordinate
@@ -19,6 +28,7 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testSetX(){
+		assertEquals(3, point2d.getX(),0.001);
 	}
 
 	/**
@@ -29,6 +39,7 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testSetY(){
+		assertEquals(4, point2d.getY(),0.001);
 	}
 
 
@@ -40,6 +51,7 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFrom(){
+		assertEquals(2,point2d.distanceFrom(new Point2d(3,2)),0.001);
 	}
 
 	/**
@@ -50,5 +62,6 @@ public class Point2dTest {
 	 */
 	@Test
 	public void testDistanceFromOrigin(){
+		assertEquals(5,point2d.distanceFromOrigin(),0.001);
 	}
 }
